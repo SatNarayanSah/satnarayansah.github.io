@@ -4572,10 +4572,12 @@ input[type="button"].btn-block {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.8rem 1rem;
+  box-shadow: 2px 2px 7px 1px #d1bf1e;
 }
 
 .navbar > .container,
 .navbar > .container-fluid {
+  box-shadow: 6px 8px 12px 7px #14bbd1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4591,6 +4593,8 @@ input[type="button"].btn-block {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+
+
 }
 
 .navbar-brand {
@@ -11381,6 +11385,7 @@ pre .code {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 180px;
+  margin-left: 85px;
 }
 
 .social-icons .social-link {
@@ -11506,13 +11511,14 @@ pre .code {
   position: relative;
   height: 80vh;
   min-height: 600px;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/newa.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/newa.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
+
 }
 
 .header .container {
@@ -11529,6 +11535,7 @@ pre .code {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #fff;
+  margin-left: 85px;
 }
 
 .header .header-content .header-subtitle {
@@ -11539,9 +11546,10 @@ pre .code {
 .header .header-content .header-title {
   font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
   font-weight: bold;
-  line-height: .7;
-  margin-bottom: 25px;
+  line-height: .9;
+  margin-bottom: 15px;
   color: inherit;
+  margin-left: 0px;
 }
 
 .header .header-content .header-mono {
@@ -11609,11 +11617,15 @@ pre .code {
 
 .about-section {
   border-bottom: 1px solid #dee2e6;
+  box-shadow: 4px 4px 10px 5px #ed1c24;
+  
 }
 
 .about-section .about-card {
   padding: 60px;
-  border-right: 1px solid #dee2e6;
+  border-right: 1px solid teal;
+  color:#ff645c;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .about-section .about-card:last-child {
