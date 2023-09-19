@@ -65,12 +65,56 @@ text-align: center;
 font-family: 'Courier New', Courier, monospace;
 font-weight: 900;
 font-size: 45px;
-color: #5c2229;
-}
-.section .card-header h4{
-  font-family: ;
-}
+color: #d61c32;
 
+}
+@font-face{
+  font-family: Title;
+  src: url("../font/IMPRISHA.TTF");
+}
+.section .card-header h4 {
+  font-family: Title;
+  text-decoration: underline;
+  color:rgba(11, 82, 148, 0.836);
+  font-size: 35PX;
+}
+.card-body h4, .card-body h5 {
+  font-family: Title;
+}
+.card-body p{
+  line-height:20px;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+}
+.demos {
+  background-image: linear-gradient(to top, #62aa89, #94bfdb);
+
+}
+.demos p{
+  color: #fff;
+  font-family: Title;
+  font-size: 25px;
+}
+.demos h1{
+  color: #810f0f;
+  font-family: Title;
+}
+.hire {
+background-image: linear-gradient(to left, #dfd474, #b9ecec);
+}
+.hire h2{
+  font-family: Title;
+  text-align: center;
+  color: #171a1d;
+  font-size: 75px
+}
+.hire button{
+  font-size: 50px;
+  font-family: Title;
+  color: #f1f1f1;
+  background-image: linear-gradient(to top, #39cf66, #cc7373);
+}
 body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
@@ -5138,8 +5182,8 @@ input[type="button"].btn-block {
 
 .card-footer {
   padding: 0.75rem 1.25rem;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: rgba(117, 85, 85, 0.03);
+  border-top: 1px solid rgba(100, 152, 177, 0.125);
 }
 
 .card-footer:last-child {
@@ -11525,7 +11569,7 @@ pre .code {
   height: 80vh;
   min-height: 600px;
   background-image: -webkit-linear-gradient(bottom, rgba(15, 25, 35, 0), rgba(0, 0, 0, 0.7)), url(../imgs/newa.jpg);
-  background-image: linear-gradient(to top, rgba(15, 25, 35, 0), rgba(0, 0, 0, 0.7)), url(../imgs/newa.jpg);
+  background-image: linear-gradient(to top, rgba(15, 25, 35, 0), rgba(60, 40, 10, 50)), url(../imgs/newa.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11568,8 +11612,8 @@ pre .code {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
    */
-   color: #C4DFAA;
-   text-shadow: 7px 8px 8px #ff3f36;
+   color: #ffffff;
+   text-shadow: 7px 8px 8px #bad1ff;
 }
 .header-title {
   font-size: 2.4rem;
@@ -11694,4 +11738,11 @@ pre .code {
   background: #F85C70;
   display: block;
   margin-top: 10px;
+}
+.footer{
+  background-color: #14bbd1;
+  color: #000;
+  font-family: Title;
+  font-size: 25px;
+  text-align: center;
 }
