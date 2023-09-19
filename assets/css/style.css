@@ -60,6 +60,16 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
+.section h2{
+text-align: center;
+font-family: 'Courier New', Courier, monospace;
+font-weight: 900;
+font-size: 45px;
+color: #5c2229;
+}
+.section .card-header h4{
+  font-family: ;
+}
 
 body {
   margin: 0;
@@ -606,6 +616,7 @@ pre code {
   margin-right: -15px;
   margin-left: -15px;
 }
+
 
 .no-gutters {
   margin-right: 0;
@@ -11374,6 +11385,7 @@ pre .code {
 }
 
 .social-icons {
+  font-size: 50px;
   list-style-type: none;
   padding-left: 0;
   display: -webkit-box;
@@ -11389,7 +11401,8 @@ pre .code {
 }
 
 .social-icons .social-link {
-  font-size: 18px;
+  font-size: 25px;
+  letter-spacing: 20px;
 }
 
 .social-icons .social-link:hover {
@@ -11511,8 +11524,8 @@ pre .code {
   position: relative;
   height: 80vh;
   min-height: 600px;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/newa.jpg);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/newa.jpg);
+  background-image: -webkit-linear-gradient(bottom, rgba(15, 25, 35, 0), rgba(0, 0, 0, 0.7)), url(../imgs/newa.jpg);
+  background-image: linear-gradient(to top, rgba(15, 25, 35, 0), rgba(0, 0, 0, 0.7)), url(../imgs/newa.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11528,9 +11541,10 @@ pre .code {
 
 .header .header-content {
   width: 100%;
+  
   position: absolute;
   left: 0;
-  top: 55%;
+  top: 75%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -11545,36 +11559,18 @@ pre .code {
 
 .header .header-content .header-title {
   font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
-  font-weight: bold;
+  font-weight: bolder;
   line-height: .9;
   margin-bottom: 15px;
   color: inherit;
   margin-left: 0px;
+  /* background: -webkit-linear-gradient(#950101, #ffffff,#4477CE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   */
+   color: #C4DFAA;
+   text-shadow: 7px 8px 8px #ff3f36;
 }
-
-.header .header-content .header-mono {
-  letter-spacing: 5px;
-  font-weight: 500;
-  font-size: calc(12px + (19 - 12) * ((100vw - 300px) / (1600 - 300)));
-  margin-bottom: 40px;
-}
-
-@media (max-width: 767.98px) {
-  .header {
-    height: 500px;
-    min-height: 500px;
-  }
-  .header .social-icons {
-    margin: auto;
-  }
-  .header .header-content {
-    padding: 20px;
-  }
-  .header .header-content .header-mono {
-    letter-spacing: 2px;
-  }
-}
-
 .header-title {
   font-size: 2.4rem;
   font-weight: bold;
@@ -11620,12 +11616,17 @@ pre .code {
   box-shadow: 4px 4px 10px 5px #ed1c24;
   
 }
+.about-section p, ul , li, span {
+  font-size: 22px;
+  color: #000;
+}
 
 .about-section .about-card {
   padding: 60px;
   border-right: 1px solid teal;
   color:#ff645c;
   font-family:'Times New Roman', Times, serif;
+  font-size: large;
 }
 
 .about-section .about-card:last-child {
