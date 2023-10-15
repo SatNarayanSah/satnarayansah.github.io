@@ -658,7 +658,7 @@ ul li {
 }
 
 .map-image {
-  background-image: url(../images/map-color-overlay.png);
+  background-image: url(../image/google-map.jpg);
 }
 
 .mt-30 {
@@ -1838,6 +1838,9 @@ li .fa {
   line-height: 40px;
   font-weight: bold;
   margin-bottom: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 6px 8px 8px #59372f;
+  text-decoration: underline;
 }
 
 .mh-experince .mh-education-deatils .mh-education-item {
