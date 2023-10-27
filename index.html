@@ -641,7 +641,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                    <form id="contactForm" class="single-form quate-form wow fadeInUp" data-toggle="validator">
+                                    <form onsubmit="sendEmail(); reset(); return false;" id="contactForm" class="single-form quate-form wow fadeInUp" data-toggle="validator">
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                                         <div class="row">
                                             <div class="col-sm-12">
@@ -696,7 +696,23 @@
     * JS Files *
     ==============
     -->
-    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "username",
+                Password : "password",
+                To : 'them@website.com',
+                From : "you@isp.com",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+        }
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
     <!-- jQuery -->
