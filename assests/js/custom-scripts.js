@@ -363,4 +363,19 @@
     |=================
     */
         
-   
+    function sendEmail(){
+      Email.send({
+          Host : "smpt.gmail.com",
+          Username : "satnarayan5166@gmail.com",
+          Password : "password",
+          To : 'them@website.com',
+          From :document.getElementById("email").value,
+          Subject : "This is the subject",
+          Body : "And this is the body"
+      }).then(
+        message => alert(message)
+      );
+  }
+
+    
+}(jQuery));
