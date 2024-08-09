@@ -329,32 +329,98 @@
     /* ============================================================ */
     /* Contact
     /* ============================================================ */
-        const form = document.querySelector('form');
-        const fullName = Document.getElementByID("name");
-        const Email = Document.getElementByID("email");
-        const Message  = Document.getElementByID("message");
-        function sendEmail() {
-            const bodyMessage = 'full Name: ${fullName.value}<br> Email: ${email.value}<br> Message: ${message.value}';
+        // const form = document.querySelector('form');
+        // const fullName = Document.getElementByID("name");
+        // const Email = Document.getElementByID("email");
+        // const Message  = Document.getElementByID("message");
+        
+        
+        // function send() {
+        //     const bodyMessage = 'full Name: ${fullName.value}<br> Email: ${email.value}<br> Message: ${message.value}';
 
 
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "satnarayan5166@gmail.com",
-                Password : "07248561DE01F69E7BF37C5DA6DD267F4942",
-                To : 'satnarayan5166@gmail.com',
-                From : "satyamsah086@gmail.com",
-                Subject : "This is the subject",
-                Body : "And this is the body"
-            }).then(
-              message => alert(Ok)
-            );
-        }
-        form.addEventListener("submit",(e) => {
-            e.preventDefault;
+        //     Email.send({
+        //         Host : "smtp.elasticemail.com",
+        //         Username : "satnarayan5166@gmail.com",
+        //         Password : "07248561DE01F69E7BF37C5DA6DD267F4942",
+        //         To : 'satnarayan5166@gmail.com',
+        //         From : "satnarayan5166@gmail.com",
+        //         Subject : "This is the subject",
+        //         Body : "And this is the body"
+        //     }).then(
+        //       message => alert(message)
+        //     );
+        // }
+        // form.addEventListener("submit",(e) => {
+        //     e.preventDefault;
 
-            sendEmail();
+        //     send();
+        // });
+
+        emailjs.init('satnarayan5166@gmail.com'); // Replace with your EmailJS User ID
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Clear previous errors
+            document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+            // Get form data
+            const fullName = document.getElementById('fullName').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const contact = document.getElementById('contact').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            let hasError = false;
+
+            // Validate full name
+            if (!fullName) {
+                document.getElementById('fullNameError').textContent = 'Full name is required.';
+                hasError = true;
+            }
+
+            // Validate address
+            if (!address) {
+                document.getElementById('addressError').textContent = 'Address is required.';
+                hasError = true;
+            }
+
+            // Validate contact number
+            if (!/^\d{10}$/.test(contact)) {
+                document.getElementById('contactError').textContent = 'Contact number must be 10 digits.';
+                hasError = true;
+            }
+
+            // Validate email
+            if (!/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById('emailError').textContent = 'Invalid email address.';
+                hasError = true;
+            }
+
+            // Validate message
+            if (!message) {
+                document.getElementById('messageError').textContent = 'Message is required.';
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            // Send email using EmailJS
+            emailjs.send('satnarayan5166@gmail.com', 'satnarayan5166@gmail.com', {
+                from_name: fullName,
+                from_address: email,
+                to_name: 'satnarayan5166@gmail.com', // You can specify a recipient name if needed
+                address: address,
+                contact: contact,
+                message: message
+            }).then(function(response) {
+                alert('Message sent successfully!');
+                document.getElementById('contactForm').reset();
+            }, function(error) {
+                alert('Failed to send message. Please try again.');
+            });
         });
-
 
 
 })(jQuery);
