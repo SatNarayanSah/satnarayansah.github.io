@@ -522,7 +522,7 @@
                                 </a>
                                 <a href="#" class="hover:text-theme dark:hover:text-white">Python
                                 </a>
-                                <a href="#" class="hover:text-theme dark:hover:text-white">Ddjango
+                                <a href="#" class="hover:text-theme dark:hover:text-white">Django
                                 </a>
                                 </div>
                                 <ul class="grid mt-4 mb-10 text-sm lg:mt-6 md:grid-cols-2 gap-x-8 gap-y-3 *:flex *:items-center">
@@ -1236,34 +1236,35 @@
                                 <!-- Contact info end -->
                                 <div class="md:col-span-7">
                                    
-                                    <form id="contactForm" action="">
+                                    <form id="contactForm" action="https://formsubmit.co/satnarayan5166@gmail.com" method="POST">
                                         <div class="form-group ">
-
-                                            <input type="text" id="fullName" class="w-full text-regular h-10 p-4 mt-3" name="fullName" placeholder="Your Full name" required>
+                                            <input type="text" id="fullName" class="w-full text-regular h-10 p-4 mt-3" name="name" placeholder="Your Full name" required>
                                             <span id="fullNameError" class="error"></span>
                                         </div>
                                         <div class="form-group">
-                                            <!-- <label for="address">Address:</label> -->
                                             <input type="text" id="address" class="w-full text-regular h-10 p-4 mt-3" name="address" placeholder="Address" required>
                                             <span id="addressError" class="error"></span>
                                         </div>
                                         <div class="form-group">
-                                            <!-- <label for="contact">Contact Number:</label> -->
-                                            <input type="tel" id="contact" name="contact" class="w-full text-regular h-10 p-4 mt-3" placeholder="9800000000" required>
+                                            <input type="tel" id="contact" name="phone" class="w-full text-regular h-10 p-4 mt-3" placeholder="9800000000" required>
                                             <span id="contactError" class="error"></span>
                                         </div>
                                         <div class="form-group">
-                                            <!-- <label for="email">Email:</label> -->
                                             <input type="email" id="email" name="email" class="w-full text-regular h-10 p-4 mt-3" placeholder="something@gmail.com" required>
                                             <span id="emailError" class="error"></span>
                                         </div>
                                         <div class="form-group">
-                                            <!-- <label for="message">Message:</label> -->
                                             <textarea id="message" name="message" class="p-3 mt-3 w-full h-36" placeholder="Message" required></textarea>
                                             <span id="messageError" class="error"></span>
                                         </div>
+                                        
+                                        <!-- Add these hidden inputs for formsubmit.co configuration -->
+                                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                                        <input type="hidden" name="_template" value="table">
+                                        <input type="hidden" name="_next" value="https://satnarayan.com.np/thanks.html">
+                                        
                                         <div class="form-group">
-                                            <button type="submit" class="btn-theme inline-flex items-center gap-2 bg-theme py-4 md:py-4.5 lg:px-9 px-7 rounded-4xl leading-none transition-all duration-300 hover:shadow-theme_shadow text-white font-medium text-[25px] md:text-base">Send Messaage</button>
+                                            <button type="submit" class="btn-theme inline-flex items-center gap-2 bg-theme py-4 md:py-4.5 lg:px-9 px-7 rounded-4xl leading-none transition-all duration-300 hover:shadow-theme_shadow text-white font-medium text-[25px] md:text-base">Send Message</button>
                                         </div>
                                     </form>
                                    </form>
